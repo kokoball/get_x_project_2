@@ -45,10 +45,10 @@ class ProductTile extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 8),
-          const Text(
-            'product.name',
+          Text(
+            product.name,
             maxLines: 2,
-            style: TextStyle(fontWeight: FontWeight.w400),
+            style: const TextStyle(fontWeight: FontWeight.w400),
             overflow: TextOverflow.ellipsis,
           ),
           const SizedBox(height: 8),
@@ -58,14 +58,14 @@ class ProductTile extends StatelessWidget {
               borderRadius: BorderRadius.circular(12),
             ),
             padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
-            child: const Row(
+            child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
-                  '',
-                  style: TextStyle(color: Colors.white),
+                  product.rating.toString(),
+                  style: const TextStyle(color: Colors.white),
                 ),
-                Icon(
+                const Icon(
                   Icons.star,
                   size: 16,
                   color: Colors.white,
@@ -74,9 +74,9 @@ class ProductTile extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 8),
-          const Text(
-            '',
-            style: TextStyle(
+          Text(
+            '\$${product.price}',
+            style: const TextStyle(
               fontSize: 20,
             ),
           ),
