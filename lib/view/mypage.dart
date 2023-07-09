@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_x_project_2/view/product_tile.dart';
 import '../controller/controller.dart';
 
 class MyPage extends StatelessWidget {
@@ -37,8 +38,8 @@ class MyPage extends StatelessWidget {
                 crossAxisSpacing: 10,
               ),
               itemBuilder: (context, index) {
-                return Container(
-                  color: Colors.red,
+                return ProductTile(
+                  controller.productList[index],
                 );
               },
               itemCount: controller.productList.length,
